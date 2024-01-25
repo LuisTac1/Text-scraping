@@ -8,7 +8,8 @@ requisition = requests.get(link, headers=hearders) # requisição do site e do n
 print(requisition)
 site = BeautifulSoup(requisition.text, "html.parser")
 
-# Description Scraping
+
+# "Description" Scraping texts
 def first():
     print()
     page_title = site.find("title") #busca titulo h1
@@ -18,22 +19,26 @@ def first():
     tag_div = site.find("div", id="beautiful-soup-documentation")  # busca div da descrição breve
     tag_p = tag_div.find_all(["p"])[0:4] # funciona, pega a tag p até as linhas desejadas
     for i in tag_p:
-        print(i.get_text()) # Funcionou pegou todas as tags p da div desejada
+        print(i.get_text(),"\n") # Funcionou pegou todas as tags p da div desejada
+
     return first
 
-# Help Scraping
+
+# "Help" Scraping texts
 def tag_help():
     print()
     tag_div = site.find("div", id="getting-help") # find div from getting-help
     tag_h2 = tag_div.find(["h2"])
+
     print(tag_h2.get_text()[0:12])
     tag_p = tag_div.find_all(["p"])
     for i in tag_p:
-        print(i.get_text()) 
+        print(i.get_text(),"\n") 
 
     return tag_help
 
-# Quick Start Scraping
+
+# "Quick Start" Scraping Text
 def quick_start():
     print()
     tag_div = site.find(id="quick-start") # find div from quick-start
@@ -44,64 +49,47 @@ def quick_start():
     for i in tag_p:
         print(i.get_text())
     print()
-    tag_div2 = tag_div.find_all("div", class_="highlight")[0:1] # Find div by div from one tag
+    tag_div2 = tag_div.find_all("div", class_="highlight")[0:6] # Find div by div from one tag
     for tag in tag_div2:
-        print(tag.get_text())
-
-
-    tag_p2 = tag_div.find_all(["p"])[1:2]
-    for i in tag_p2:
-        print()
-        print(i.get_text())
-    print()
-    tag_div3 = tag_div.find_all("div", class_="highlight")[1:2]
-    for tag in tag_div3:
-        print(tag.get_text())
-
-
-    tag_p3 = tag_div.find_all(["p"])[2:3]
-    for i in tag_p3:
-        print()
-        print(i.get_text())
-    print()
-    tag_div4 = tag_div.find_all("div", class_="highlight")[2:3]
-    for tag in tag_div4:
-        print(tag.get_text())
-
-
-    tag_p4 = tag_div.find_all(["p"])[3:4]
-    for i in tag_p4:
-        print()
-        print(i.get_text())
-    print()
-    tag_div2 = tag_div.find_all("div", class_="highlight")[3:4]
-    for tag in tag_div2:
-        print(tag.get_text())
-
-
-    tag_p5 = tag_div.find_all(["p"])[4:5]
-    for i in tag_p5:
-        print()
-        print(i.get_text())
-    print()
-    tag_div2 = tag_div.find_all("div", class_="highlight")[4:5]
-    for tag in tag_div2:
-        print(tag.get_text())
-
-
-    tag_p6 = tag_div.find_all(["p"])[5:6]
-    for i in tag_p6:
-        print()
-        print(i.get_text())
+        print(tag.get_text(),"\n")
 
     return quick_start
+
+
+# "Installing Beautiful Soup" Scraping texts
+def instal_bfs():
+    tag_div = site.find("div", id="installing-beautiful-soup")
+    tag_h1 = tag_div.find("h1")
+    print(tag_h1.get_text()[0:25])
+
+    tag_p = tag_div.find_all(["p"])[0:11]
+    print()
+    for i in tag_p:
+        print(i.get_text(),"\n")
+
+    return instal_bfs
+
+
+# "Problems After Installation" Scraping texts
+def problems_after():
+    tag_div = site.find("div", id="problems-after-installation")
+    tag_h1 = tag_div.find("h2")
+    print(tag_h1.get_text()[0:27])
+
+    tag_p = tag_div.find_all(["p"])[0:8]
+    print()
+    for i in tag_p:
+        print(i.get_text(),"\n")
+
+    return problems_after
 
 
 
 first()
 tag_help()
 quick_start()
-
+instal_bfs()
+problems_after()
 
 
 # for tag in text_1:
