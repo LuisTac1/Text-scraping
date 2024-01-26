@@ -73,8 +73,8 @@ def instal_bfs():
 # "Problems After Installation" Scraping texts
 def problems_after():
     tag_div = site.find("div", id="problems-after-installation")
-    tag_h1 = tag_div.find("h2")
-    print(tag_h1.get_text()[0:27])
+    tag_h2 = tag_div.find("h2")
+    print(tag_h2.get_text()[0:27])
 
     tag_p = tag_div.find_all(["p"])[0:8]
     print()
@@ -84,16 +84,44 @@ def problems_after():
     return problems_after
 
 
+# "Installing a parser" Scraping texts
+def install_parser():
+    tag_div = site.find("div", id="installing-a-parser")
+    tag_h2 = tag_div.find("h2")
+    print(tag_h2.get_text()[0:19])
 
-first()
-tag_help()
-quick_start()
-instal_bfs()
-problems_after()
+    tag_p = tag_div.find_all(["p"])[0:8]
+    print()
+    for i in tag_p:
+        print(i.get_text(),"\n")
+
+    # to fix this
+    table = tag_div.find_all("table", class_="docutils") # find table
+    for i in table:
+        print("-"*50,i.text,"-"*50)
+
+    tag_p = tag_div.find_all(["p"])[8:10]
+    print()
+    for i in tag_p:
+        print(i.get_text(),"\n")
+
+    return install_parser
 
 
-# for tag in text_1:
-#     p = tag.get_text() # pega a teg p e outras merdas
-#     print(p)
+# "Making the soup" Scraping texts
+def making_soup():
+    tag_div = site.find("div", id="making-the-soup")
+    tag_h1 = tag_div.find("h1")
+    print(tag_h1.get_text()[0:15])
 
-#print(text_1.p.get_text()) # pega a primeira teg p atravez da div
+
+    return making_soup
+
+
+first
+tag_help
+quick_start
+instal_bfs
+problems_after
+install_parser
+making_soup()
