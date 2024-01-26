@@ -114,14 +114,318 @@ def making_soup():
     tag_h1 = tag_div.find("h1")
     print(tag_h1.get_text()[0:15])
 
+    tag_p1 = tag_div.find_all(["p"])[0:1]
+    print()
+    for i in tag_p1:
+        print(i.get_text(),"\n")
+
+    tag_div2 = tag_div.find_all("div", class_="highlight")[0:1] # Find div by div from one tag
+    for tag in tag_div2:
+        print(tag.get_text(),"\n")
+
+    tag_p2 = tag_div.find_all(["p"])[1:2]
+    print()
+    for i in tag_p2:
+        print(i.get_text(),"\n")
+
+    tag_div2 = tag_div.find_all("div", class_="highlight")[1:2] # Find div by div from one tag
+    for tag in tag_div2:
+        print(tag.get_text(),"\n")
+
+    tag_p2 = tag_div.find_all(["p"])[2:3]
+    print()
+    for i in tag_p2:
+        print(i.get_text(),"\n")
+
 
     return making_soup
 
+# "Kinds of objects" Scraping texts
+def Kind_obj():
+    tag_div = site.find("div", id="kinds-of-objects")
+    tag_h1 = tag_div.find("h1")
+    print(tag_h1.get_text()[0:16])
 
-first
-tag_help
-quick_start
-instal_bfs
-problems_after
-install_parser
-making_soup()
+    tag_p1 = tag_div.find_all(["p"])[0:2]
+    print()
+    for i in tag_p1:
+        print(i.get_text(),"\n")
+
+    tag_div2 = tag_div.find_all("div", class_="highlight")[0:1] # Find div by div from one tag
+    for tag in tag_div2:
+        print(tag.get_text(),"\n")
+
+    tag_p2 = tag_div.find_all(["p"])[2:3]
+    print()
+    for i in tag_p2:
+        print(i.get_text(),"\n")
+
+    # "name section"
+    def name():
+        div_n = tag_div.find("div", id="name")
+        name = div_n.find("h3")
+        print(name.get_text()[0:4])
+
+        tag_p1 = div_n.find_all(["p"])[0:1]
+        print()
+        for i in tag_p1:
+            print(i.get_text(),"\n")
+
+        div_n2 = div_n.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+        for tag in div_n2:
+            print(tag.get_text(),"\n")
+
+        tag_p2 = div_n.find_all(["p"])[1:2]
+        print()
+        for i in tag_p2:
+            print(i.get_text(),"\n")
+
+        div_n2 = div_n.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+        for tag in div_n2:
+            print(tag.get_text(),"\n")
+
+        return name
+    # "attributes section"
+    def attributes():
+        div_att = tag_div.find("div", id="attributes")
+        tag_h3 = div_att.find("h3")
+        print(tag_h3.get_text()[0:10])
+
+        tag_p1 = div_att.find_all(["p"])[0:1]
+        print()
+        for i in tag_p1:
+            print(i.get_text(),"\n")
+
+        div_at2 = div_att.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+        for tag in div_at2:
+            print(tag.get_text(),"\n")
+
+        tag_p2 = div_att.find_all(["p"])[1:2]
+        print()
+        for i in tag_p2:
+            print(i.get_text(),"\n")
+
+        div_at3 = div_att.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+        for tag in div_at3:
+            print(tag.get_text(),"\n")
+
+        tag_p2 = div_att.find_all(["p"])[2:3]
+        print()
+        for i in tag_p2:
+            print(i.get_text(),"\n")
+
+        div_at3 = div_att.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+        for tag in div_at3:
+            print(tag.get_text(),"\n")
+
+        return attributes
+    
+    # "multi valued attributes"
+    def mult_val_attr():
+        tag_mva = tag_div.find("div", id="multi-valued-attributes")
+        tag_h4 = tag_mva.find("h4")
+        print(tag_h4.get_text()[0:23])
+
+        tag_p1 = tag_mva.find_all(["p"])[0:1]
+        print()
+        for i in tag_p1:
+            print(i.get_text(),"\n")
+
+        div_mva1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+        for tag in div_mva1:
+            print(tag.get_text(),"\n")
+
+        tag_p2 = tag_mva.find_all(["p"])[1:2]
+        print()
+        for i in tag_p2:
+            print(i.get_text(),"\n")
+
+        div_mva2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+        for tag in div_mva2:
+            print(tag.get_text(),"\n")
+
+        tag_p3 = tag_mva.find_all(["p"])[2:3]
+        print()
+        for i in tag_p3:
+            print(i.get_text(),"\n")
+
+        div_mva3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+        for tag in div_mva3:
+            print(tag.get_text(),"\n")
+
+        tag_p4 = tag_mva.find_all(["p"])[3:4]
+        print()
+        for i in tag_p4:
+            print(i.get_text(),"\n")
+
+        div_mva4 = tag_div.find_all("div", class_="highlight-default notranslate")[3:4] # Find div by div from one tag
+        for tag in div_mva4:
+            print(tag.get_text(),"\n")
+
+        tag_p5 = tag_mva.find_all(["p"])[4:5]
+        print()
+        for i in tag_p5:
+            print(i.get_text(),"\n")
+
+        div_mva5 = tag_div.find_all("div", class_="highlight-default notranslate")[4:5] # Find div by div from one tag
+        for tag in div_mva5:
+            print(tag.get_text(),"\n")
+
+        tag_p6 = tag_mva.find_all(["p"])[5:6]
+        print()
+        for i in tag_p6:
+            print(i.get_text(),"\n")
+
+        div_mva6 = tag_div.find_all("div", class_="highlight-default notranslate")[5:6] # Find div by div from one tag
+        for tag in div_mva6:
+            print(tag.get_text(),"\n")
+
+        tag_p7 = tag_mva.find_all(["p"])[6:7]
+        print()
+        for i in tag_p7:
+            print(i.get_text(),"\n")
+
+        div_mva7 = tag_div.find_all("div", class_="highlight-default notranslate")[6:7] # Find div by div from one tag
+        for tag in div_mva7:
+            print(tag.get_text(),"\n")
+
+        tag_p8 = tag_mva.find_all(["p"])[7:8]
+        print()
+        for i in tag_p8:
+            print(i.get_text(),"\n")
+
+        div_mva8 = tag_div.find_all("div", class_="highlight-default notranslate")[7:8] # Find div by div from one tag
+        for tag in div_mva8:
+            print(tag.get_text(),"\n")
+
+        return mult_val_attr
+    
+    # "Navigablestring"
+    def navigablestring():
+        tag_mva = tag_div.find("div", id="navigablestring")
+        tag_h4 = tag_mva.find("h2")
+        print(tag_h4.get_text()[0:15])
+
+        tag_p1 = tag_mva.find_all(["p"])[0:1]
+        print()
+        for i in tag_p1:
+            print(i.get_text(),"\n")
+
+        div_nav1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+        for tag in div_nav1:
+            print(tag.get_text(),"\n")
+
+        tag_p2 = tag_mva.find_all(["p"])[1:2]
+        print()
+        for i in tag_p2:
+            print(i.get_text(),"\n")
+
+        div_nav2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+        for tag in div_nav2:
+            print(tag.get_text(),"\n")
+
+
+        tag_p3 = tag_mva.find_all(["p"])[2:3]
+        print()
+        for i in tag_p3:
+            print(i.get_text(),"\n")
+
+        div_nav3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+        for tag in div_nav3:
+            print(tag.get_text(),"\n")
+
+        tag_p4 = tag_mva.find_all(["p"])[3:5]
+        print()
+        for i in tag_p4:
+            print(i.get_text(),"\n")
+
+        return navigablestring
+    
+    # "beautifulsoup"
+    def beautifulsoup():
+        tag_btf = tag_div.find("div", id="beautifulsoup")
+        tag_h4 = tag_btf.find("h2")
+        print(tag_h4.get_text()[0:13])
+        
+        tag_p1 = tag_btf.find_all(["p"])[0:2]
+        print()
+        for i in tag_p1:
+            print(i.get_text(),"\n")
+
+        div_btf1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+        for tag in div_btf1:
+            print(tag.get_text(),"\n")
+
+        tag_p2 = tag_btf.find_all(["p"])[2:3]
+        print()
+        for i in tag_p2:
+            print(i.get_text(),"\n")
+
+        div_btf2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+        for tag in div_btf2:
+            print(tag.get_text(),"\n")
+
+        return beautifulsoup
+
+    # Comments and other special strings
+    def comments_oss():
+        tag_com = tag_div.find("div", id="comments-and-other-special-strings")
+        tag_h4 = tag_com.find("h2")
+        print(tag_h4.get_text()[0:34])
+
+        tag_p1 = tag_com.find_all(["p"])[0:1]
+        print()
+        for i in tag_p1:
+            print(i.get_text(),"\n")
+
+        div_com1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+        for tag in div_com1:
+            print(tag.get_text(),"\n")
+
+        tag_p2 = tag_com.find_all(["p"])[1:2]
+        print()
+        for i in tag_p2:
+            print(i.get_text(),"\n")
+
+        div_com2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+        for tag in div_com2:
+            print(tag.get_text(),"\n")
+
+        tag_p3 = tag_com.find_all(["p"])[2:3]
+        print()
+        for i in tag_p3:
+            print(i.get_text(),"\n")
+
+        div_com3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+        for tag in div_com3:
+            print(tag.get_text(),"\n")
+
+        tag_p4 = tag_com.find_all(["p"])[3:4]
+        print()
+        for i in tag_p4:
+            print(i.get_text(),"\n")
+
+        div_com4 = tag_div.find_all("div", class_="highlight-default notranslate")[3:4] # Find div by div from one tag
+        for tag in div_com4:
+            print(tag.get_text(),"\n")
+
+        return comments_oss
+
+
+    name()
+    attributes()
+    mult_val_attr()
+    navigablestring()
+    beautifulsoup()
+    comments_oss()
+    return Kind_obj
+
+
+first()
+tag_help()
+quick_start()
+instal_bfs()
+problems_after()
+install_parser()
+making_soup() # daqui pra cima corrigir e melhorar
+Kind_obj()
