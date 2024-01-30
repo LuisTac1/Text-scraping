@@ -1,6 +1,6 @@
 # Scraping text data
 
-## Sobre
+## About
 This is a web scraping program made with the Beautifulsoup library, extracting text data from Beautifulsoup's own online documentation: https://beautiful-soup-4.readthedocs.io/en/latest/#
 
 ## How to run
