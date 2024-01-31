@@ -908,12 +908,734 @@ def nav_tree():
     return nav_tree
 
 
-first
-tag_help
-quick_start
-instal_bfs
-problems_after
-install_parser
-making_soup # daqui pra cima corrigir e melhorar
-Kind_obj
+# "Searching the tree" Scraping text
+def search_tree():
+    tag_div = site.find("div", id="searching-the-tree")
+    tag_h1 = tag_div.find("h1")
+    print(tag_h1.get_text()[0:18])
+
+    tag_p1 = tag_div.find_all(["p"])[0:2]
+    print()
+    for i in tag_p1:
+        print(i.get_text(),"\n")
+
+    div_tree1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+    for tag in div_tree1:
+        print(tag.get_text(),"\n")
+
+    tag_p2 = tag_div.find_all(["p"])[2:3]
+    print()
+    for i in tag_p2:
+        print(i.get_text(),"\n")
+
+    def Kinds_filters():
+        tag_div = site.find("div", id="kinds-of-filters")
+        tag_h1 = tag_div.find("h2")
+        print(tag_h1.get_text()[0:16])
+
+        tag_p1 = tag_div.find_all(["p"])[0:1]
+        print()
+        for i in tag_p1:
+            print(i.get_text(),"\n")
+
+        def a_string():
+            tag_div = site.find("div", id="a-string")
+            tag_h1 = tag_div.find("h3")
+            print(tag_h1.get_text()[0:8])
+
+            tag_p1 = tag_div.find_all(["p"])[0:1]
+            print()
+            for i in tag_p1:
+                print(i.get_text(),"\n")
+
+            div_tree1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+            for tag in div_tree1:
+                print(tag.get_text(),"\n")            
+
+            tag_p2 = tag_div.find_all(["p"])[1:2]
+            print()
+            for i in tag_p2:
+                print(i.get_text(),"\n")
+
+            return a_string
+
+        def reg_expres():
+            tag_div = site.find("div", id="a-regular-expression")
+            tag_h1 = tag_div.find("h3")
+            print(tag_h1.get_text()[0:20])
+
+            tag_p1 = tag_div.find_all(["p"])[0:1]
+            print()
+            for i in tag_p1:
+                print(i.get_text(),"\n")
+
+            div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+            for tag in div_1:
+                print(tag.get_text(),"\n")     
+
+            tag_p2 = tag_div.find_all(["p"])[1:2]
+            print()
+            for i in tag_p2:
+                print(i.get_text(),"\n")
+
+            div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+            for tag in div_2:
+                print(tag.get_text(),"\n")     
+
+            return reg_expres
+        
+        def a_list():
+            tag_div = site.find("div", id="a-list")
+            tag_h1 = tag_div.find("h3")
+            print(tag_h1.get_text()[0:6])
+
+            tag_p1 = tag_div.find_all(["p"])[0:1]
+            print()
+            for i in tag_p1:
+                print(i.get_text(),"\n")
+
+            div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+            for tag in div_1:
+                print(tag.get_text(),"\n")   
+            
+            return a_list
+        
+        def true():
+            tag_div = site.find("div", id="true")
+            tag_h1 = tag_div.find("h3")
+            print(tag_h1.get_text()[0:6])
+
+            tag_p1 = tag_div.find_all(["p"])[0:1]
+            print()
+            for i in tag_p1:
+                print(i.get_text(),"\n")
+
+            div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+            for tag in div_1:
+                print(tag.get_text(),"\n")   
+            
+            return true
+        
+        def a_function():
+            tag_div = site.find("div", id="a-function")
+            tag_h1 = tag_div.find("h3")
+            print(tag_h1.get_text()[0:6])
+
+            tag_p1 = tag_div.find_all(["p"])[0:2]
+            print()
+            for i in tag_p1:
+                print(i.get_text(),"\n")
+
+            div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+            for tag in div_1:
+                print(tag.get_text(),"\n")   
+
+            tag_p2 = tag_div.find_all(["p"])[2:3]
+            print()
+            for i in tag_p2:
+                print(i.get_text(),"\n")
+
+            div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+            for tag in div_2:
+                print(tag.get_text(),"\n")   
+
+            tag_p3 = tag_div.find_all(["p"])[3:5]
+            print()
+            for i in tag_p3:
+                print(i.get_text(),"\n")
+
+            div_3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+            for tag in div_3:
+                print(tag.get_text(),"\n") 
+
+            tag_p4 = tag_div.find_all(["p"])[5:6]
+            print()
+            for i in tag_p4:
+                print(i.get_text(),"\n")
+
+            div_4 = tag_div.find_all("div", class_="highlight-default notranslate")[3:4] # Find div by div from one tag
+            for tag in div_4:
+                print(tag.get_text(),"\n") 
+
+            tag_p5 = tag_div.find_all(["p"])[6:7]
+            print()
+            for i in tag_p5:
+                print(i.get_text(),"\n")
+
+            return a_function
+        
+        def find_all():
+            tag_div = site.find("div", id="find-all")
+            tag_h1 = tag_div.find("h2")
+            print(tag_h1.get_text()[0:8])
+
+            tag_p1 = tag_div.find_all(["p"])[0:2]
+            print()
+            for i in tag_p1:
+                print(i.get_text(),"\n")
+
+            div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+            for tag in div_1:
+                print(tag.get_text(),"\n")   
+
+            tag_p1 = tag_div.find_all(["p"])[1:3]
+            print()
+            for i in tag_p1:
+                print(i.get_text(),"\n")
+
+            def the_name_arg():
+                tag_div = site.find("div", id="the-name-argument")
+                tag_h1 = tag_div.find("h3")
+                print(tag_h1.get_text()[0:17])
+
+                tag_p1 = tag_div.find_all(["p"])[0:2]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")  
+
+                tag_p2 = tag_div.find_all(["p"])[2:3]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                return the_name_arg
+
+            def the_kword_args():
+                tag_div = site.find("div", id="the-keyword-arguments")
+                tag_h1 = tag_div.find("h3")
+                print(tag_h1.get_text()[0:21])
+
+                tag_p1 = tag_div.find_all(["p"])[0:1]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")   
+
+                tag_p2 = tag_div.find_all(["p"])[1:2]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+                for tag in div_2:
+                    print(tag.get_text(),"\n")  
+
+                tag_p3 = tag_div.find_all(["p"])[2:4]
+                print()
+                for i in tag_p3:
+                    print(i.get_text(),"\n")
+
+                div_3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+                for tag in div_3:
+                    print(tag.get_text(),"\n") 
+
+                tag_p4 = tag_div.find_all(["p"])[4:5]
+                print()
+                for i in tag_p4:
+                    print(i.get_text(),"\n")
+
+                div_4 = tag_div.find_all("div", class_="highlight-default notranslate")[3:4] # Find div by div from one tag
+                for tag in div_4:
+                    print(tag.get_text(),"\n") 
+
+                tag_p5 = tag_div.find_all(["p"])[5:6]
+                print()
+                for i in tag_p5:
+                    print(i.get_text(),"\n")
+
+                div_5 = tag_div.find_all("div", class_="highlight-default notranslate")[4:5] # Find div by div from one tag
+                for tag in div_5:
+                    print(tag.get_text(),"\n") 
+
+                tag_p6 = tag_div.find_all(["p"])[6:7]
+                print()
+                for i in tag_p6:
+                    print(i.get_text(),"\n")
+
+                div_6 = tag_div.find_all("div", class_="highlight-default notranslate")[5:6] # Find div by div from one tag
+                for tag in div_6:
+                    print(tag.get_text(),"\n") 
+
+                tag_p7 = tag_div.find_all(["p"])[7:8]
+                print()
+                for i in tag_p7:
+                    print(i.get_text(),"\n")
+
+                div_7 = tag_div.find_all("div", class_="highlight-default notranslate")[6:7] # Find div by div from one tag
+                for tag in div_7:
+                    print(tag.get_text(),"\n") 
+
+                return the_kword_args            
+
+            def searchcss_cls():
+                tag_div = site.find("div", id="searching-by-css-class")
+                tag_h1 = tag_div.find("h3")
+                print(tag_h1.get_text()[0:22])
+
+                tag_p1 = tag_div.find_all(["p"])[0:1]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")   
+
+                tag_p2 = tag_div.find_all(["p"])[1:2]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+                for tag in div_2:
+                    print(tag.get_text(),"\n") 
+
+                tag_p3 = tag_div.find_all(["p"])[2:3]
+                print()
+                for i in tag_p3:
+                    print(i.get_text(),"\n")
+
+                div_3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+                for tag in div_3:
+                    print(tag.get_text(),"\n") 
+
+                tag_p4 = tag_div.find_all(["p"])[3:4]
+                print()
+                for i in tag_p4:
+                    print(i.get_text(),"\n")
+
+                div_4 = tag_div.find_all("div", class_="highlight-default notranslate")[3:4] # Find div by div from one tag
+                for tag in div_4:
+                    print(tag.get_text(),"\n") 
+
+                tag_p5 = tag_div.find_all(["p"])[4:5]
+                print()
+                for i in tag_p5:
+                    print(i.get_text(),"\n")
+
+                div_5 = tag_div.find_all("div", class_="highlight-default notranslate")[4:5] # Find div by div from one tag
+                for tag in div_5:
+                    print(tag.get_text(),"\n") 
+
+                tag_p6 = tag_div.find_all(["p"])[5:6]
+                print()
+                for i in tag_p6:
+                    print(i.get_text(),"\n")
+
+                div_6 = tag_div.find_all("div", class_="highlight-default notranslate")[5:6] # Find div by div from one tag
+                for tag in div_6:
+                    print(tag.get_text(),"\n") 
+
+                tag_p7 = tag_div.find_all(["p"])[6:7]
+                print()
+                for i in tag_p7:
+                    print(i.get_text(),"\n")
+
+                div_7 = tag_div.find_all("div", class_="highlight-default notranslate")[6:7] # Find div by div from one tag
+                for tag in div_7:
+                    print(tag.get_text(),"\n") 
+
+                return searchcss_cls
+
+
+            def string_argument():
+                tag_div = site.find("div", id="the-string-argument")
+                tag_h1 = tag_div.find("h3")
+                print(tag_h1.get_text()[0:19])
+
+                tag_p1 = tag_div.find_all(["p"])[0:1]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[1:2]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+                for tag in div_2:
+                    print(tag.get_text(),"\n")
+
+                tag_p3 = tag_div.find_all(["p"])[2:3]
+                print()
+                for i in tag_p3:
+                    print(i.get_text(),"\n")
+
+                div_3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+                for tag in div_3:
+                    print(tag.get_text(),"\n")
+
+                return string_argument
+
+
+            def limit_argument():
+                tag_div = site.find("div", id="the-limit-argument")
+                tag_h1 = tag_div.find("h3")
+                print(tag_h1.get_text()[0:18])
+
+                tag_p1 = tag_div.find_all(["p"])[0:2]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                return limit_argument
+
+            def recursive_argument():
+                tag_div = site.find("div", id="the-recursive-argument")
+                tag_h1 = tag_div.find("h3")
+                print(tag_h1.get_text()[0:22])
+
+                tag_p1 = tag_div.find_all(["p"])[0:1]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[1:2]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+                for tag in div_2:
+                    print(tag.get_text(),"\n")
+
+                tag_p3 = tag_div.find_all(["p"])[2:4]
+                print()
+                for i in tag_p3:
+                    print(i.get_text(),"\n")
+
+                return recursive_argument
+            
+            def call_tag_like():
+                tag_div = site.find("div", id="calling-a-tag-is-like-calling-find-all")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:22])
+
+                tag_p1 = tag_div.find_all(["p"])[0:1]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[1:2]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+                for tag in div_2:
+                    print(tag.get_text(),"\n")
+
+                return call_tag_like
+
+            def find():
+                tag_div = site.find("div", id="find")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:6])
+
+                tag_p1 = tag_div.find_all(["p"])[0:2]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[2:4]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+                for tag in div_2:
+                    print(tag.get_text(),"\n")
+
+                tag_p3 = tag_div.find_all(["p"])[4:5]
+                print()
+                for i in tag_p3:
+                    print(i.get_text(),"\n")
+
+                div_3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+                for tag in div_3:
+                    print(tag.get_text(),"\n")
+
+                return find
+
+            def find_parent():
+                tag_div = site.find("div", id="find-parents-and-find-parent")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:30])
+
+                tag_p1 = tag_div.find_all(["p"])[0:4]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[4:6]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                return find_parent
+
+            def find_next_sibling():
+                tag_div = site.find("div", id="find-next-siblings-and-find-next-sibling")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:30])
+
+                tag_p1 = tag_div.find_all(["p"])[0:3]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                return find_next_sibling
+
+            def find_prev_sibling():
+                tag_div = site.find("div", id="find-previous-siblings-and-find-previous-sibling")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:50])
+
+                tag_p1 = tag_div.find_all(["p"])[0:3]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                return find_prev_sibling
+
+            def find_all_next():
+                tag_div = site.find("div", id="find-all-next-and-find-next")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:31])
+
+                tag_p1 = tag_div.find_all(["p"])[0:3]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[3:4]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                return find_all_next
+
+            def find_all_prev():
+                tag_div = site.find("div", id="find-all-previous-and-find-previous")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:37])
+
+                tag_p1 = tag_div.find_all(["p"])[0:3]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[3:4]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                return find_all_prev
+            
+            def css_selectors():
+                tag_div = site.find("div", id="css-selectors")
+                tag_h1 = tag_div.find("h2")
+                print(tag_h1.get_text()[0:13])
+
+
+                tag_p1 = tag_div.find_all(["p"])[0:5]
+                print()
+                for i in tag_p1:
+                    print(i.get_text(),"\n")
+
+                div_1 = tag_div.find_all("div", class_="highlight-default notranslate")[0:1] # Find div by div from one tag
+                for tag in div_1:
+                    print(tag.get_text(),"\n")
+
+                tag_p2 = tag_div.find_all(["p"])[5:6]
+                print()
+                for i in tag_p2:
+                    print(i.get_text(),"\n")
+
+                div_2 = tag_div.find_all("div", class_="highlight-default notranslate")[1:2] # Find div by div from one tag
+                for tag in div_2:
+                    print(tag.get_text(),"\n")
+
+                tag_p3 = tag_div.find_all(["p"])[6:7]
+                print()
+                for i in tag_p3:
+                    print(i.get_text(),"\n")
+
+                div_3 = tag_div.find_all("div", class_="highlight-default notranslate")[2:3] # Find div by div from one tag
+                for tag in div_3:
+                    print(tag.get_text(),"\n")
+
+                tag_p4 = tag_div.find_all(["p"])[7:8]
+                print()
+                for i in tag_p4:
+                    print(i.get_text(),"\n")
+
+                div_4 = tag_div.find_all("div", class_="highlight-default notranslate")[3:4] # Find div by div from one tag
+                for tag in div_4:
+                    print(tag.get_text(),"\n")
+
+                tag_p5 = tag_div.find_all(["p"])[8:9]
+                print()
+                for i in tag_p5:
+                    print(i.get_text(),"\n")
+
+                div_5 = tag_div.find_all("div", class_="highlight-default notranslate")[4:5] # Find div by div from one tag
+                for tag in div_5:
+                    print(tag.get_text(),"\n")
+
+                tag_p6 = tag_div.find_all(["p"])[9:10]
+                print()
+                for i in tag_p6:
+                    print(i.get_text(),"\n")
+
+                div_6 = tag_div.find_all("div", class_="highlight-default notranslate")[5:6] # Find div by div from one tag
+                for tag in div_6:
+                    print(tag.get_text(),"\n")
+
+                tag_p7 = tag_div.find_all(["p"])[10:11]
+                print()
+                for i in tag_p7:
+                    print(i.get_text(),"\n")
+
+                div_7 = tag_div.find_all("div", class_="highlight-default notranslate")[6:7] # Find div by div from one tag
+                for tag in div_7:
+                    print(tag.get_text(),"\n")
+
+                tag_p8 = tag_div.find_all(["p"])[11:12]
+                print()
+                for i in tag_p8:
+                    print(i.get_text(),"\n")
+
+                div_8 = tag_div.find_all("div", class_="highlight-default notranslate")[7:8] # Find div by div from one tag
+                for tag in div_8:
+                    print(tag.get_text(),"\n")
+
+                tag_p9 = tag_div.find_all(["p"])[12:13]
+                print()
+                for i in tag_p9:
+                    print(i.get_text(),"\n")
+
+                div_9 = tag_div.find_all("div", class_="highlight-default notranslate")[8:9] # Find div by div from one tag
+                for tag in div_9:
+                    print(tag.get_text(),"\n")
+
+                tag_p10 = tag_div.find_all(["p"])[13:14]
+                print()
+                for i in tag_p10:
+                    print(i.get_text(),"\n")
+
+                div_10 = tag_div.find_all("div", class_="highlight-default notranslate")[9:10] # Find div by div from one tag
+                for tag in div_10:
+                    print(tag.get_text(),"\n")
+
+                tag_p11 = tag_div.find_all(["p"])[14:15]
+                print()
+                for i in tag_p11:
+                    print(i.get_text(),"\n")
+
+                div_11 = tag_div.find_all("div", class_="highlight-default notranslate")[10:11] # Find div by div from one tag
+                for tag in div_11:
+                    print(tag.get_text(),"\n")
+
+                tag_p12 = tag_div.find_all(["p"])[15:16]
+                print()
+                for i in tag_p12:
+                    print(i.get_text(),"\n")
+
+                div_12 = tag_div.find_all("div", class_="highlight-default notranslate")[11:12] # Find div by div from one tag
+                for tag in div_12:
+                    print(tag.get_text(),"\n")
+
+                tag_p13 = tag_div.find_all(["p"])[16:17]
+                print()
+                for i in tag_p13:
+                    print(i.get_text(),"\n")
+
+                return css_selectors
+
+            the_name_arg()
+            the_kword_args()
+            searchcss_cls()
+            string_argument()
+            limit_argument()
+            recursive_argument()
+            call_tag_like()
+            find()
+            find_parent()
+            find_next_sibling()
+            find_prev_sibling()
+            find_all_next()
+            find_all_prev()
+            css_selectors()
+            return find_all
+        
+        a_string()
+        reg_expres()
+        a_list()
+        true()
+        a_function()
+        find_all()
+        return Kinds_filters
+    
+    Kinds_filters()
+    return search_tree
+
+
+first()
+tag_help()
+quick_start()
+instal_bfs()
+problems_after()
+install_parser()
+making_soup() # daqui pra cima corrigir e melhorar
+Kind_obj()
 nav_tree()
+search_tree()
