@@ -10,5 +10,5 @@ For this program to work you need to install the Beautiful Soup 4 libraries on y
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/LuisTac1/Text-scraping/blob/main/LICENSE) 
 
 # Author
-
+Luis Eduardo
 https://github.com/LuisTac1
