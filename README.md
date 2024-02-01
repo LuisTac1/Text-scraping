@@ -1,5 +1,5 @@
 [![NPM](https://beautiful-soup-4.readthedocs.io/en/latest/_images/6.1.jpg)]()
-# Scraping text data
+# Scraping text data with Beautifulsoup
 
 ## About
 This is a web scraping program made with the Beautifulsoup library, extracting text data from Beautifulsoup's own online documentation: https://beautiful-soup-4.readthedocs.io/en/latest/#
