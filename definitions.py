@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 link = 'https://beautiful-soup-4.readthedocs.io/en/latest/#' # Website link to be scraped
-hearders = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"} # User request
+hearders = {"Your-User-Agent"} # User request
 
 requisition = requests.get(link, headers=hearders) # Website and browser request
 print(requisition)
@@ -1635,7 +1635,7 @@ def search_tree():
 # instal_bfs()
 # problems_after()
 # install_parser()
-# making_soup() # daqui pra cima corrigir e melhorar
+# making_soup() 
 # Kind_obj()
 # nav_tree()
 # search_tree()
