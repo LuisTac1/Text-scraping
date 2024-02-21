@@ -1,9 +1,9 @@
-import webscraping.definitions as definitions
+import definitions
 """
 
 """
 
-list = ["help", "quick_start", "instal_bfs", "problems_after", "install_parser", "making_soup", "Kind_obj", "nav_tree", "search_tree"]
+list = ["help", "quick_start", "instal_bfs", "problems_after", "install_parser", "making_soup", "Kind_obj", "nav_tree", "search_tree", "all"]
 
 definitions.first()
 print("*Choose a section to view the scrape*".upper(),"\n")
@@ -53,13 +53,12 @@ def acv_all():
         definitions.instal_bfs()
         definitions.problems_after()
         definitions.install_parser()
-        definitions.making_soup() # daqui pra cima corrigir e melhorar
+        definitions.making_soup() 
         definitions.Kind_obj()
         definitions.nav_tree()
         definitions.search_tree()
 
     return acv_all
-
 
 acv_one()
 acv_all()
